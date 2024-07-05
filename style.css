@@ -1,0 +1,289 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.paper-texture {
+    background-image: url('https://img.freepik.com/premium-photo/old-paper-texture-vintage-paper-background_262663-429.jpg');
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid #000;
+    padding: 1rem;
+}
+
+.header-top {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.news-ticker {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.main-article, .side-news {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.main-article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+}
+
+.side-news h3 {
+    font-family: 'Playfair Display', serif;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+#news-list article {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#news-list article:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Tambahkan styles berikut pada file CSS yang sudah ada */
+
+#category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#category-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#category-articles article {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#full-article {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+#full-article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#full-article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#full-article .meta {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+#full-article .content {
+    line-height: 1.8;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pagination a {
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #000;
+    color: white;
+    border: 1px solid #000;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.related-articles {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.related-articles h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.related-articles article {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #category-articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 0 2rem;
+    }
+
+    .main-article h2 {
+        font-size: 2.5rem;
+    }
+
+    #category-articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* News ticker styles */
+.news-ticker {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 120s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* Related articles styles */
+.related-articles {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.related-articles h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.related-articles article {
+    margin-bottom: 1rem;
+}
